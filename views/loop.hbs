@@ -1,0 +1,19 @@
+{{#each people}}
+
+<P>{{this}}</P>
+{{/each}}
+
+
+<p>Another way</p>
+
+{{#each people}}
+
+<P>{{.}}</P>
+{{/each}}
+
+<p>Another way</p>
+
+{{#each people as |value key|}}
+
+<P>{{key}}:{{value}}</P>
+{{/each}}
