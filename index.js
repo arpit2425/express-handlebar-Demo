@@ -6,6 +6,7 @@ const path=require('path');
 app.engine("hbs",ehb({
     defaultLayout:"mainlayout",
     extname:'hbs',
+    partialsDir:path.join(__dirname,"views/partial"),
     layoutsDir:path.join(__dirname,"views/help")
 }));
 app.set("view engine", "hbs");
