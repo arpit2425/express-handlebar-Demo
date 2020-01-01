@@ -27,8 +27,17 @@ app.get("/loop",(req,res)=>{
         user:{
             username:"Arpit",
             phone:"7899"
-            
+
         }
+        ,
+        lists:[
+            {
+                items:["MAngo","apple","Peach"]
+            },
+            {
+                items:["Potato","Onion","Peas"]
+            }
+        ]
     })
 })
 app.listen(3000,()=>{

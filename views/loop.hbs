@@ -42,3 +42,14 @@
 
 <P>{{key}}:{{value}}</P>
 {{/each}}
+
+<h1>Nested Loop</h1>
+{{#each lists as |xvalue xkey|}}
+
+{{#each xvalue.items as |yvalue ykey|}}
+<P>{{yvalue}}</P>
+{{/each}}
+
+
+
+{{/each}}
