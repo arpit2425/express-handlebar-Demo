@@ -17,3 +17,28 @@
 
 <P>{{key}}:{{value}}</P>
 {{/each}}
+
+
+<h2>
+    Accessing object
+</h2>
+
+{{#each user}}
+
+<P>{{this}}</P>
+{{/each}}
+
+
+<p>Another way</p>
+
+{{#each user}}
+
+<P>{{.}}</P>
+{{/each}}
+
+<p>Another way</p>
+
+{{#each user as |value key|}}
+
+<P>{{key}}:{{value}}</P>
+{{/each}}

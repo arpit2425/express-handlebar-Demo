@@ -23,7 +23,12 @@ app.get("/loop",(req,res)=>{
             "Arpit",
             "fejknj",
             "vjnjv"
-        ]
+        ],
+        user:{
+            username:"Arpit",
+            phone:"7899"
+            
+        }
     })
 })
 app.listen(3000,()=>{
