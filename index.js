@@ -22,11 +22,15 @@ const hbs=ehb.create({
                 }
     }
 })
+
 app.engine("hbs",hbs.engine);
+
 app.set("view engine", "hbs");
+app.use(express.static('public'))
 app.get("/",(req,res)=>{
     res.render("index",{title:"Home page",
     isdisplay:false,
+    style:'css/home.css',
     people:[
         {firstname:"Arpit",lastname:"Trivedi"},
         {firstname:"Arpit",lastname:"Trivedi"},
@@ -35,7 +39,8 @@ app.get("/",(req,res)=>{
     about:"fdnjkjfvvfnjfj"});
 })
 app.get("/dash",(req,res)=>{
-    res.render("dashboard",{list:true})
+    res.render("dashboard",{list:true,
+        style:'css/dash.css',})
 })
 app.get("/loop",(req,res)=>{
     res.render("loop",{
@@ -67,6 +72,7 @@ app.get('/look',(req,res)=>{
             "fejknj",
             "vjnjv"
         ],
+        style:'css/look.css',
         user:{
             username:"Arpit",
             phone:"7899"
